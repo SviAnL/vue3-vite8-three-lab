@@ -1,0 +1,105 @@
+[data-theme='light'],
+:root {
+  color-scheme: light;
+
+  /* ---------- 颜色：基础三色 ---------- */
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-primary-active: #1d4ed8;
+  --color-primary-foreground: #fff;
+  --color-secondary: #6366f1;
+  --color-secondary-hover: #4f46e5;
+  --color-secondary-active: #4338ca;
+  --color-secondary-foreground: #fff;
+  --color-accent: #06b6d4;
+  --color-accent-hover: #0891b2;
+  --color-accent-active: #0e7490;
+  --color-accent-foreground: #fff;
+
+  /* ---------- 颜色：背景 / 表面 ---------- */
+  --color-background: #f8fafc;
+  --color-surface: #fff;
+  --color-surface-hover: #f1f5f9;
+  --color-surface-active: #e2e8f0;
+  --color-surface-elevated: #fff;
+  --color-overlay: rgb(15 23 42 / 50%);
+
+  /* ---------- 颜色：文本 ---------- */
+  --color-foreground: #0f172a;
+  --color-foreground-muted: #475569;
+  --color-muted: #64748b;
+  --color-placeholder: #94a3b8;
+  --color-inverse: #f8fafc;
+
+  /* ---------- 颜色：边框 / 分割线 ---------- */
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+  --color-divider: #e2e8f0;
+  --color-ring: #3b82f6;
+
+  /* ---------- 颜色：语义状态 ---------- */
+  --color-success: #22c55e;
+  --color-success-foreground: #fff;
+  --color-success-surface: #f0fdf4;
+  --color-warning: #f59e0b;
+  --color-warning-foreground: #1f2937;
+  --color-warning-surface: #fffbeb;
+  --color-error: #ef4444;
+  --color-error-foreground: #fff;
+  --color-error-surface: #fef2f2;
+  --color-info: #0ea5e9;
+  --color-info-foreground: #fff;
+  --color-info-surface: #f0f9ff;
+
+  /* ---------- 颜色：交互态 ---------- */
+  --color-selection: #bfdbfe;
+  --color-selection-foreground: #0f172a;
+  --color-highlight: #fef08a;
+  --color-disabled: #e2e8f0;
+  --color-disabled-foreground: #94a3b8;
+
+  /* ---------- 颜色：代码 / 引用块 ---------- */
+  --color-code-bg: #f1f5f9;
+  --color-code-fg: #0f172a;
+  --color-pre-bg: #0f172a;
+  --color-pre-fg: #e2e8f0;
+  --color-blockquote-border: #cbd5e1;
+  --color-blockquote-fg: #475569;
+
+  /* ---------- 颜色：链接 ---------- */
+  --color-link: #2563eb;
+  --color-link-hover: #1d4ed8;
+  --color-link-visited: #7c3aed;
+
+  /* ---------- 颜色：滚动条 ---------- */
+  --color-scrollbar-track: #f1f5f9;
+  --color-scrollbar-thumb: #cbd5e1;
+  --color-scrollbar-thumb-hover: #94a3b8;
+
+  /* ---------- 阴影 ---------- */
+  --shadow-color: 220 3% 60%;
+  --shadow-2xs: 0 1px rgb(0 0 0 / 5%);
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 5%);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px -1px rgb(0 0 0 / 10%);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 10px -6px rgb(0 0 0 / 10%);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 25%);
+  --inset-shadow-2xs: inset 0 1px rgb(0 0 0 / 5%);
+  --inset-shadow-xs: inset 0 1px 1px rgb(0 0 0 / 5%);
+  --inset-shadow-sm: inset 0 2px 4px rgb(0 0 0 / 5%);
+  --drop-shadow-xs: 0 1px 1px rgb(0 0 0 / 5%);
+  --drop-shadow-sm: 0 1px 2px rgb(0 0 0 / 15%);
+  --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 12%);
+  --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 15%);
+  --drop-shadow-xl: 0 9px 7px rgb(0 0 0 / 10%);
+  --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 15%);
+  --text-shadow-2xs: 0px 1px 0px rgb(0 0 0 / 15%);
+  --text-shadow-xs: 0px 1px 1px rgb(0 0 0 / 20%);
+  --text-shadow-sm:
+    0px 1px 0px rgb(0 0 0 / 7.5%), 0px 1px 1px rgb(0 0 0 / 7.5%), 0px 2px 2px rgb(0 0 0 / 7.5%);
+  --text-shadow-md:
+    0px 1px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 10%), 0px 2px 4px rgb(0 0 0 / 10%);
+  --text-shadow-lg:
+    0px 1px 2px rgb(0 0 0 / 10%), 0px 3px 2px rgb(0 0 0 / 10%), 0px 4px 8px rgb(0 0 0 / 10%);
+}

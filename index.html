@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="canonical" href="%VITE_APP_REQUEST_URL%" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="%VITE_APP_DESCRIPTION%" />
+    <meta name="keywords" content="%VITE_APP_TITLE%" />
+    <meta name="author" content="SviAnL" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="%VITE_APP_TITLE%" />
+    <meta name="theme-color" content="#f8fafc" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>%VITE_APP_TITLE%</title>
+    <script>
+      // 防止页面闪烁
+      ;(function () {
+        try {
+          const THEME = ['light', 'dark', 'high-contrast']
+
+          const data = localStorage.getItem('SVIANL_THEME')
+
+          const saved = data ? JSON.parse(data)?.mode : null
+
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+          const theme = THEME.includes(saved) ? saved : prefersDark ? 'dark' : 'light'
+
+          document.documentElement.setAttribute('data-theme', theme)
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light')
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <noscript>
+      <div style="text-align: center; padding: 30px; color: #64748b">
+        抱歉，当前网站需要启用 JavaScript 才能正常访问，请在浏览器设置中开启后刷新页面重试。
+      </div>
+    </noscript>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

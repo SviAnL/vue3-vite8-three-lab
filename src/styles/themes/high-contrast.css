@@ -1,0 +1,103 @@
+[data-theme='high-contrast'] {
+  color-scheme: dark;
+
+  /* ---------- 颜色：基础三色 ---------- */
+  --color-primary: #ff0;
+  --color-primary-hover: #ffea00;
+  --color-primary-active: #ffd600;
+  --color-primary-foreground: #000;
+  --color-secondary: #0ff;
+  --color-secondary-hover: #00e5e5;
+  --color-secondary-active: #0cc;
+  --color-secondary-foreground: #000;
+  --color-accent: #f0f;
+  --color-accent-hover: #e600e6;
+  --color-accent-active: #c0c;
+  --color-accent-foreground: #000;
+
+  /* ---------- 颜色：背景 / 表面 ---------- */
+  --color-background: #000;
+  --color-surface: #1a1a1a;
+  --color-surface-hover: #2a2a2a;
+  --color-surface-active: #3a3a3a;
+  --color-surface-elevated: #262626;
+  --color-overlay: rgb(0 0 0 / 85%);
+
+  /* ---------- 颜色：文本 ---------- */
+  --color-foreground: #fff;
+  --color-foreground-muted: #e5e5e5;
+  --color-muted: #ccc;
+  --color-placeholder: #999;
+  --color-inverse: #000;
+
+  /* ---------- 颜色：边框 / 分割线（高对比度必须清晰可见） ---------- */
+  --color-border: #fff;
+  --color-border-strong: #fff;
+  --color-divider: #fff;
+  --color-ring: #ff0;
+
+  /* ---------- 颜色：语义状态 ---------- */
+  --color-success: #0f0;
+  --color-success-foreground: #000;
+  --color-success-surface: #030;
+  --color-warning: #ff0;
+  --color-warning-foreground: #000;
+  --color-warning-surface: #330;
+  --color-error: #f00;
+  --color-error-foreground: #fff;
+  --color-error-surface: #300;
+  --color-info: #0ff;
+  --color-info-foreground: #000;
+  --color-info-surface: #033;
+
+  /* ---------- 颜色：交互态 ---------- */
+  --color-selection: #ff0;
+  --color-selection-foreground: #000;
+  --color-highlight: #ff0;
+  --color-disabled: #2a2a2a;
+  --color-disabled-foreground: #808080;
+
+  /* ---------- 颜色：代码 / 引用块 ---------- */
+  --color-code-bg: #1a1a1a;
+  --color-code-fg: #fff;
+  --color-pre-bg: #212121;
+  --color-pre-fg: #0f0;
+  --color-blockquote-border: #ff0;
+  --color-blockquote-fg: #fff;
+
+  /* ---------- 颜色：链接 ---------- */
+  --color-link: #0ff;
+  --color-link-hover: #ff0;
+  --color-link-visited: #f0f;
+
+  /* ---------- 颜色：滚动条 ---------- */
+  --color-scrollbar-track: #000;
+  --color-scrollbar-thumb: #fff;
+  --color-scrollbar-thumb-hover: #ff0;
+
+  /* ---------- 阴影：高对比度下几乎禁用阴影，改用边框 ---------- */
+  --shadow-2xs: 0 0 0 1px #fff;
+  --shadow-xs: 0 0 0 1px #fff;
+  --shadow-sm: 0 0 0 1px #fff;
+  --shadow-md: 0 0 0 2px #fff;
+  --shadow-lg: 0 0 0 2px #fff;
+  --shadow-xl: 0 0 0 2px #fff;
+  --shadow-2xl: 0 0 0 3px #fff;
+  --inset-shadow-2xs: inset 0 0 0 1px #fff;
+  --inset-shadow-xs: inset 0 0 0 1px #fff;
+  --inset-shadow-sm: inset 0 0 0 2px #fff;
+  --drop-shadow-xs: 0 0 0 1px #fff;
+  --drop-shadow-sm: 0 0 0 1px #fff;
+  --drop-shadow-md: 0 0 0 2px #fff;
+  --drop-shadow-lg: 0 0 0 2px #fff;
+  --drop-shadow-xl: 0 0 0 2px #fff;
+  --drop-shadow-2xl: 0 0 0 3px #fff;
+  --text-shadow-2xs: none;
+  --text-shadow-xs: none;
+  --text-shadow-sm: none;
+  --text-shadow-md: none;
+  --text-shadow-lg: none;
+
+  /* 高对比度模式下，将白色替换黑色 */
+  --color-white: #222;
+}

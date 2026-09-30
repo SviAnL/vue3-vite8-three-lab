@@ -1,0 +1,254 @@
+@import 'tailwindcss';
+@import './transitions.css';
+@import './themes/light.css';
+@import './themes/dark.css';
+@import './themes/high-contrast.css';
+
+/* 官方插件，提供 prose 系列类 */
+@plugin '@tailwindcss/typography';
+
+/* 深色模式：dark:xxx */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* 高对比度模式：hc:xxx */
+@custom-variant hc (&:where([data-theme='high-contrast'], [data-theme='high-contrast'] *));
+
+/* 浅色模式：light:xxx */
+@custom-variant light (&:where([data-theme='light'], [data-theme='light'] *));
+
+/* 使用 inline 让工具类直接引用变量值，避免变量解析层级问题 */
+@theme inline {
+  /* ---------- 颜色：基础三色 ---------- */
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-primary-active: var(--color-primary-active);
+  --color-primary-foreground: var(--color-primary-foreground);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-hover: var(--color-secondary-hover);
+  --color-secondary-active: var(--color-secondary-active);
+  --color-secondary-foreground: var(--color-secondary-foreground);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-accent-active: var(--color-accent-active);
+  --color-accent-foreground: var(--color-accent-foreground);
+
+  /* ---------- 颜色：背景 / 表面 ---------- */
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-surface-hover: var(--color-surface-hover);
+  --color-surface-active: var(--color-surface-active);
+  --color-surface-elevated: var(--color-surface-elevated);
+  --color-overlay: var(--color-overlay);
+
+  /* ---------- 颜色：文本 ---------- */
+  --color-foreground: var(--color-foreground);
+  --color-foreground-muted: var(--color-foreground-muted);
+  --color-muted: var(--color-muted);
+  --color-placeholder: var(--color-placeholder);
+  --color-inverse: var(--color-inverse);
+
+  /* ---------- 颜色：边框 / 分割线 ---------- */
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+  --color-divider: var(--color-divider);
+  --color-ring: var(--color-ring);
+
+  /* ---------- 颜色：语义状态 ---------- */
+  --color-success: var(--color-success);
+  --color-success-foreground: var(--color-success-foreground);
+  --color-success-surface: var(--color-success-surface);
+  --color-warning: var(--color-warning);
+  --color-warning-foreground: var(--color-warning-foreground);
+  --color-warning-surface: var(--color-warning-surface);
+  --color-error: var(--color-error);
+  --color-error-foreground: var(--color-error-foreground);
+  --color-error-surface: var(--color-error-surface);
+  --color-info: var(--color-info);
+  --color-info-foreground: var(--color-info-foreground);
+  --color-info-surface: var(--color-info-surface);
+
+  /* ---------- 颜色：交互态 ---------- */
+  --color-selection: var(--color-selection);
+  --color-selection-foreground: var(--color-selection-foreground);
+  --color-highlight: var(--color-highlight);
+  --color-disabled: var(--color-disabled);
+  --color-disabled-foreground: var(--color-disabled-foreground);
+
+  /* ---------- 颜色：代码 / 引用块 ---------- */
+  --color-code-bg: var(--color-code-bg);
+  --color-code-fg: var(--color-code-fg);
+  --color-pre-bg: var(--color-pre-bg);
+  --color-pre-fg: var(--color-pre-fg);
+  --color-blockquote-border: var(--color-blockquote-border);
+  --color-blockquote-fg: var(--color-blockquote-fg);
+
+  /* ---------- 颜色：链接 ---------- */
+  --color-link: var(--color-link);
+  --color-link-hover: var(--color-link-hover);
+  --color-link-visited: var(--color-link-visited);
+
+  /* ---------- 颜色：滚动条 ---------- */
+  --color-scrollbar-track: var(--color-scrollbar-track);
+  --color-scrollbar-thumb: var(--color-scrollbar-thumb);
+  --color-scrollbar-thumb-hover: var(--color-scrollbar-thumb-hover);
+
+  /* ---------- 阴影 ---------- */
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+  --inset-shadow-2xs: var(--inset-shadow-2xs);
+  --inset-shadow-xs: var(--inset-shadow-xs);
+  --inset-shadow-sm: var(--inset-shadow-sm);
+  --drop-shadow-xs: var(--drop-shadow-xs);
+  --drop-shadow-sm: var(--drop-shadow-sm);
+  --drop-shadow-md: var(--drop-shadow-md);
+  --drop-shadow-lg: var(--drop-shadow-lg);
+  --drop-shadow-xl: var(--drop-shadow-xl);
+  --drop-shadow-2xl: var(--drop-shadow-2xl);
+
+  /* ---------- 字体族 ---------- */
+  --font-sans: monospace, 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* ---------- 自定义断点 ---------- 
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem; */
+
+  /* ---------- 动画 ---------- */
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-pulse-slow: pulse 3s ease-in-out infinite;
+  --animate-fade-in: fadein 0.5s ease-out;
+  --animate-slide-up: slideup 0.5s ease-out;
+  --animate-reading-progress: reading-progress 1s linear;
+}
+
+@layer base {
+  html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  /* 文本选中 */
+  ::selection {
+    background-color: var(--color-selection);
+    color: var(--color-selection-foreground);
+  }
+
+  /* 焦点环 */
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+
+  /* 占位符 */
+  ::placeholder {
+    color: var(--color-placeholder);
+  }
+
+  /* 链接 */
+  a {
+    color: var(--color-link);
+  }
+
+  a:hover {
+    color: var(--color-link-hover);
+  }
+
+  a:visited {
+    color: var(--color-link-visited);
+  }
+
+  /* 代码 */
+  code {
+    background-color: var(--color-code-bg);
+    color: var(--color-code-fg);
+  }
+
+  pre {
+    background-color: var(--color-pre-bg);
+    color: var(--color-pre-fg);
+  }
+
+  blockquote {
+    border-color: var(--color-blockquote-border);
+    color: var(--color-blockquote-fg);
+  }
+}
+
+@layer utilities {
+  .prose {
+    --tw-prose-body: var(--color-foreground-muted);
+    --tw-prose-headings: var(--color-foreground);
+
+    /* --tw-prose-body: var(--color-foreground);
+    --tw-prose-headings: var(--color-foreground-muted); */
+
+    --tw-prose-quotes: var(--color-blockquote-fg);
+    --tw-prose-quote-borders: var(--color-blockquote-border);
+    --tw-prose-code: var(--color-code-fg);
+    --tw-prose-pre-code: var(--color-pre-fg);
+    --tw-prose-pre-bg: var(--color-pre-bg);
+    --tw-prose-links: var(--color-link);
+    --tw-prose-counters: var(--color-muted);
+    --tw-prose-bullets: var(--color-muted);
+    --tw-prose-hr: var(--color-divider);
+    --tw-prose-th-borders: var(--color-border);
+    --tw-prose-td-borders: var(--color-border);
+    --tw-prose-bold: var(--color-foreground);
+    --tw-prose-captions: var(--color-muted);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes reading-progress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}

@@ -1,0 +1,42 @@
+{
+  // 全局默认格式化器使用 Prettier 插件
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // 让 VSCode 使用项目内安装的 prettier
+  "prettier.prettierPath": "./node_modules/prettier",
+  // 保存文件时自动格式化代码
+  "editor.formatOnSave": true,
+  // 保存时执行代码修复动作, `explicit` 显式启用
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  // eslint 配置文件使用 flat 模式
+  "eslint.useFlatConfig": true,
+  // 告诉 VSCode ESLint 插件, 对哪些文件启用 eslint 校验
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
+  // 强制 VSCode 使用项目本地 node_modules 里面的 TypeScript 版本, 不用 VSCode 自带的 TS
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  // 当 VSCode 检测项目有本地 typescript 时, 弹出提示: 是否切换到工作区 TS 版本
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
+  // 告诉 stylelint 插件, 哪些文件做样式校验
+  "stylelint.validate": ["css", "scss", "vue", "html", "tailwindcss"],
+  // 文件行尾换行符统一为 LF(\n), Unix 换行
+  "files.eol": "\n",
+  // 多个定义时直接跳转第一个, 不再弹出选择弹窗, 解决双击候选
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  // 文件夹嵌套
+  "explorer.fileNesting.enabled": true,
+  // 默认折叠
+  "explorer.fileNesting.expand": false,
+  // 文件夹嵌套规则
+  "explorer.fileNesting.patterns": {
+    "package.json": "pnpm-lock.yaml, pnpm-workspace.yaml, .npmrc, .nvmrc, .node-version",
+    ".env": ".env.local, .env.development, .env.production, .env.test, .env.analyze",
+    ".prettierrc": ".prettierignore",
+    ".eslintcache": ".prettiercache, .stylelintcache",
+    "README.md": "README.en.md, README.ko.md, CONTRIBUTING.md",
+    "tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo",
+    "vite.config.ts": "vitest.config.ts, vite.config.*.ts",
+    ".gitignore": ".gitattributes, .gitmodules",
+  },
+}

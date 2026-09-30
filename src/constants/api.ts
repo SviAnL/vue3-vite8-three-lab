@@ -1,0 +1,9 @@
+/** API 错误码定义 */
+export const API_RESULT_CODE = {
+  SUCCESS: 0,
+  BAD_REQUEST: 400,
+  UNAUTHORIZED: 401,
+  FORBIDDEN: 403,
+  NOT_FOUND: 404,
+  SERVER_ERROR: 500,
+} as const

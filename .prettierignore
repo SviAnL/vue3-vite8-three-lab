@@ -1,0 +1,24 @@
+# 忽略编译输出目录
+dist
+dist-ssr
+
+# 忽略第三方依赖
+node_modules
+.pnpm-store
+pnpm-lock.yaml
+
+# 忽略静态资源
+public/
+*.min.js
+*.min.css
+
+# 忽略特定文件类型
+**/*.svg
+**/*.sh
+/.*
+
+# 忽略自动生成的类型定义文件
+types/
+
+# 忽略typescript编译输出目录
+tsc-build
